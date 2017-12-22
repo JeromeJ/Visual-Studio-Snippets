@@ -4,7 +4,7 @@
     <Header>
       <Shortcut>IFELSE</Shortcut>
       <Title>
-        if(condition){}else{}
+        if(condition){then}else{then}
       </Title>
     </Header>
     <Snippet>
@@ -14,14 +14,24 @@
           <ID>condition</ID>
         </Literal>
         <Literal Editable="true">
-          <Default>else{}</Default>
-          <ID>else</ID>
+          <Default>then</Default>
+          <ID>iftrue</ID>
+        </Literal>
+        <Literal Editable="true">
+          <Default>then</Default>
+          <ID>iffalse</ID>
         </Literal>
       </Declarations>
       <Code Language="CSharp">
-        <![CDATA[if($condition$){
-        $end$
-        }$else$]]>
+        <![CDATA[if($condition$)
+        {
+          $iftrue$
+        }
+        else
+        {
+          $iffalse$
+        }
+        $end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>
