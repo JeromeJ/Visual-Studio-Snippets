@@ -2,27 +2,36 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Shortcut>DLW</Shortcut>
-      <Title>Debug.LogWarning();</Title> 
+      <Shortcut>IFELSE</Shortcut>
+      <Title>
+        if(condition){then}else{then}
+      </Title>
     </Header>
     <Snippet>
       <Declarations>
         <Literal Editable="true">
-          <Default> </Default>
-          <ID>contextclass</ID>
+          <Default>Condition</Default>
+          <ID>condition</ID>
         </Literal>
         <Literal Editable="true">
-          <Default> </Default>
-          <ID>description</ID>
+          <Default>then</Default>
+          <ID>iftrue</ID>
         </Literal>
         <Literal Editable="true">
-          <Default>, this.gameObject </Default>
-          <ID>target</ID>
+          <Default>then</Default>
+          <ID>iffalse</ID>
         </Literal>
       </Declarations>
       <Code Language="CSharp">
-        <![CDATA[Debug.LogWarning("T($contextclass$): $description$"$target$);
-$end$]]>
+        <![CDATA[if($condition$)
+        {
+          $iftrue$
+        }
+        else
+        {
+          $iffalse$
+        }
+        $end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>

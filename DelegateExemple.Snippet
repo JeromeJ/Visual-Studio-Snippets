@@ -2,26 +2,23 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Shortcut>DLW</Shortcut>
-      <Title>Debug.LogWarning();</Title> 
+      <Shortcut>DEX</Shortcut>
+      <Title>Delegate</Title> 
     </Header>
     <Snippet>
       <Declarations>
         <Literal Editable="true">
           <Default> </Default>
-          <ID>contextclass</ID>
+          <ID>nameDelegate</ID>
         </Literal>
         <Literal Editable="true">
           <Default> </Default>
-          <ID>description</ID>
-        </Literal>
-        <Literal Editable="true">
-          <Default>, this.gameObject </Default>
-          <ID>target</ID>
+          <ID>nameInstanceDelegate</ID>
         </Literal>
       </Declarations>
       <Code Language="CSharp">
-        <![CDATA[Debug.LogWarning("T($contextclass$): $description$"$target$);
+        <![CDATA[public delegate void $nameDelegate$ (float testfloat);
+  public $nameDelegate$ $nameInstanceDelegate$;
 $end$]]>
       </Code>
     </Snippet>
